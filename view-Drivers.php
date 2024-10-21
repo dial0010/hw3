@@ -4,8 +4,8 @@
     <thead>
       <tr>
         <th>ID</th>
-      <h>Name</h>
-      <h>Brand</h>
+      <th>Name</th>
+      <th>Brand</th>
       </tr>
     </thead>
     <tbody>
