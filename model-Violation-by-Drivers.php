@@ -1,15 +1,21 @@
 <?php
 function selectViolation() {
-  try {
-    $conn = get_db_connection();
-    $stmt = $conn->prepare("SELECT Violation_id, Violation_number, Violation_reason FROM `Violation`")
-    $stmt->execute();
+    $conn = null;
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT Violation_id, Violation_number, Violation_reason FROM `Violation`");
+        $stmt->execute();
         $result = $stmt->get_result();
-        $conn->close();
         return $result;
     } catch (Exception $e) {
-        $conn->close();
+        if ($conn) {
+            $conn->close();
+        }
         throw $e;
+    } finally {
+        if ($conn) {
+            $conn->close();
+        }
     }
 }
 ?>
