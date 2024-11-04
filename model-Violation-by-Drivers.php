@@ -1,5 +1,5 @@
 <?php
-function selectViolationbyDrivers($iid) {
+function selectViolationsbyDrivers($iid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT V.Violation_id, Violation_number, Violation_reason, Month, Day, Day_time FROM `Violation` V join City C on V.Violation_id = C.City_id where C.Drivers_id=?");
