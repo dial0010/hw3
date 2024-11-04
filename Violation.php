@@ -5,6 +5,6 @@ require_once("model-Violation.php");
 $pageTitle = "Violations";
 include "view-header.php";
 $Violation = selectViolation();
-include "view-Violations.php";
+include "view-Violation.php";
 include "view-footer.php";
 ?>
