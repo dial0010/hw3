@@ -4,7 +4,7 @@ require_once("model-Violation.php");
 
 $pageTitle = "Violation";
 include "view-header.php";
-$Violation = selectViolation();
+$Violation = selectViolations();
 include "view-Violation.php";
 include "view-footer.php";
 ?>
