@@ -13,9 +13,9 @@
 while ($Violations = $Violations->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $Violations['Violation_id']; ?></td>
-    <td><?php echo $Violations['Violation_number']; ?></td>
-    <td><?php echo $Violations['Violation_reason']; ?></td>
+  <td><?php echo $Violation['Violation_id']; ?></td>
+    <td><?php echo $Violation['Violation_number']; ?></td>
+    <td><?php echo $Violation['Violation_reason']; ?></td>
 </tr>
       <?php
 }
