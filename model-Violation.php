@@ -1,5 +1,5 @@
 <?php
-function selectViolationsByDrivers($iid) {
+function selectViolationByDrivers($iid) {
   try {
     $conn = get_db_connection();
   $stmt = $conn->prepare("SELECT Violation_id, Violation_number, Violation_reason FROM `Violation`");
