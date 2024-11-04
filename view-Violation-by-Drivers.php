@@ -16,12 +16,12 @@
 while ($Violations = $Violations->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $Violation['Violation_id']; ?></td>
-    <td><?php echo $Violation['Violation_number']; ?></td>
-    <td><?php echo $Violation['Violation_reason']; ?></td>
-  <td><?php echo $Violation['Month']; ?></td>
-  <td><?php echo $Violation['Day']; ?></td>
-  <td><?php echo $Violation['Day_time']; ?></td>
+  <td><?php echo $Violations['Violation_id']; ?></td>
+    <td><?php echo $Violations['Violation_number']; ?></td>
+    <td><?php echo $Violations['Violation_reason']; ?></td>
+  <td><?php echo $Violations['Month']; ?></td>
+  <td><?php echo $Violations['Day']; ?></td>
+  <td><?php echo $Violations['Day_time']; ?></td>
 </tr>
       <?php
 }
