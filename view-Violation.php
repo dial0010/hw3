@@ -1,4 +1,4 @@
-<h1>Violation</h1>
+<h1>Violations</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -10,12 +10,12 @@
     </thead>
     <tbody>
 <?php
-while ($Violation = $Violations->fetch_assoc()) {
+while ($Violations = $Violations->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $Violation['Violation_id']; ?></td>
-    <td><?php echo $Violation['Violation_number']; ?></td>
-    <td><?php echo $Violation['Violation_reason']; ?></td>
+  <td><?php echo $Violations['Violation_id']; ?></td>
+    <td><?php echo $Violations['Violation_number']; ?></td>
+    <td><?php echo $Violations['Violation_reason']; ?></td>
 </tr>
       <?php
 }
