@@ -6,6 +6,7 @@
         <th>ID</th>
       <th>Number</th>
       <th>Reason</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,12 @@ while ($Violation = $Violation->fetch_assoc()) {
     <td><?php echo $Violation['Violation_id']; ?></td>
     <td><?php echo $Violation['Violation_number']; ?></td>
     <td><?php echo $Violation['Violation_reason']; ?></td>
+  <td>
+    <form method="post" action="City-by-Violation.php">
+  <input type="hidden" name="cid" value="<?php echo $Violation['Violation_id']; ?>">
+  <button type="submit" class="btn btn-primary">City</button>
+</form>
+  </td>
 </tr>
       <?php
 }
