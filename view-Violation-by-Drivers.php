@@ -1,4 +1,4 @@
-<h1>Violation by Drivers</h1>
+<h1>Violations by Drivers</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 <?php
-while ($Violation = $Violations->fetch_assoc()) {
+while ($Violations = $Violations->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $Violation['Violation_id']; ?></td>
