@@ -13,9 +13,10 @@
 while ($Violation = $Violations->fetch_assoc()) {
 ?>
 <tr>
-  <td><?php echo $Violation['Violation_id']; ?></td>
+    <td><?php echo $Violation['Violation_id']; ?></td>
     <td><?php echo $Violation['Violation_number']; ?></td>
     <td><?php echo $Violation['Violation_reason']; ?></td>
+    <td><a href="Violation-by-Drivers.php?id=<?php echo $Violation['Violation_id']; ?>">Violation</a></td>
 </tr>
       <?php
 }
