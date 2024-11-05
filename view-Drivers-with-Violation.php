@@ -11,6 +11,12 @@ while ($Driver = $Drivers->fetch_assoc()) {
   $Violation = selectViolationbyDrivers($Driver['Drivers_id']);
   while($Violation = $Violation->fetchassoc()) {
     ?>
+     <td><?php echo $Violation['Violation_id']; ?></td>
+    <td><?php echo $Violation['Violation_number']; ?></td>
+    <td><?php echo $Violation['Violation_reason']; ?></td>
+  <td><?php echo $Violation['Month']; ?></td>
+  <td><?php echo $Violation['Day']; ?></td>
+  <td><?php echo $Violation['Day_time']; ?></td>
   <?php
   }
   ?>
