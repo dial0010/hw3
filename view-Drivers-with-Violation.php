@@ -7,19 +7,16 @@ while ($Driver = $Drivers->fetch_assoc()) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $Driver['Drivers_name']; ?></h5>
       <p class="card-text">
+        <ul class="list-group">
         <?php
   $Violation = selectViolationbyDrivers($Driver['Drivers_id']);
   while($Violation = $Violation->fetchassoc()) {
     ?>
-     <td><?php echo $Violation['Violation_id']; ?></td>
-    <td><?php echo $Violation['Violation_number']; ?></td>
-    <td><?php echo $Violation['Violation_reason']; ?></td>
-  <td><?php echo $Violation['Month']; ?></td>
-  <td><?php echo $Violation['Day']; ?></td>
-  <td><?php echo $Violation['Day_time']; ?></td>
+      <li class="list-group-item"><?php echo $Violation['Violation_number']; ?> - <?php echo $Violation['Month']; ?> - <?php echo $Violation['Day']; ?> - <?php echo $Violation['Day_time']; ?></li>
   <?php
   }
   ?>
+        </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Car Brand: <?php echo $Driver['Car_brand']; ?></small></p>
     </div>
