@@ -13,7 +13,6 @@ function selectDrivers() {
     }
 }
 
-<?php
 function selectViolationbyDrivers($iid) {
     try {
         $conn = get_db_connection();
@@ -27,6 +26,5 @@ function selectViolationbyDrivers($iid) {
         $conn->close();
         throw $e;
     }
-}
-?>    
+}  
 ?>
