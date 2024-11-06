@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 <?php
-    while ($City = $City->fetch_assoc()) {
+    while ($City = $Cities->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $City['Violation_id']; ?></td>
