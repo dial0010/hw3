@@ -10,7 +10,7 @@ while ($Driver = $Drivers->fetch_assoc()) {
         <ul class="list-group">
         <?php
   $Violation = selectViolationbyDrivers($Driver['Drivers_id']);
-  while($Violation = $Violations->fetch_assoc()) {
+  while($Violation = $Violation->fetch_assoc()) {
     ?>
       <li class="list-group-item"><?php echo $Violation['Violation_number']; ?> - <?php echo $Violation['Month']; ?> - <?php echo $Violation['Day']; ?> - <?php echo $Violation['Day_time']; ?></li>
   <?php
