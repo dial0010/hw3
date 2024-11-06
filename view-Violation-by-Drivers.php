@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 <?php
-while ($Violation = $Violation->fetch_assoc()) {
+while ($Violation = $Violations->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $Violation['Violation_id']; ?></td>
