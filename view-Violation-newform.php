@@ -24,6 +24,7 @@
     <label for="vReason" class="form-label">Violation Reason</label>
     <input type="text" class="form-control" id="vReason" name="vReason">
   </div>
+        <input type="hidden" name="actionType" value="Add">
   <button type="submit" class="btn btn-primary">Save</button>
 </form>
       </div>
