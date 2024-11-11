@@ -15,7 +15,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form>
+      <form method="post" action="">
   <div class="mb-3">
     <label for="vNumber" class="form-label">Violation Number</label>
     <input type="text" class="form-control" id="vNumber" name="vNumber">
@@ -24,7 +24,7 @@
     <label for="vReason" class="form-label">Violation Reason</label>
     <input type="text" class="form-control" id="vReason" name="vReason">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
       </div>
     </div>
