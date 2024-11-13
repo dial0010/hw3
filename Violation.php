@@ -21,6 +21,13 @@ if (isset($_POST['actionType'])) {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
     }
     break;
+     case "Edit";
+    if (updateViolation($_POST['vNumber'], $_POST['vReason'], $_POST['cid'])) {
+    echo '<div class="alert alert-success" role="alert">Course edited.</div>';
+    } else {
+      echo '<div class="alert alert-danger" role="alert">Error.</div>';
+    }
+    break;
   }
 }
 
