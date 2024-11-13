@@ -29,6 +29,10 @@ while ($Violation = $Violations->fetch_assoc()) {
     <td><?php echo $Violation['Violation_number']; ?></td>
     <td><?php echo $Violation['Violation_reason']; ?></td>
   <td>
+    <?php
+  include "view-Violation-editform.php";
+  ?>
+  
   </td>
     <td>
        <form method="post" action="">
