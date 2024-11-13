@@ -7,6 +7,9 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
+    case "Add";
+    insertViolation($_POST['vNumber'], $_POST['vReason']);
+    break;
   }
 }
 
