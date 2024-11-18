@@ -9,21 +9,21 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
     if (insertViolation($_POST['vNumber'], $_POST['vReason'])) {
-    echo '<div class="alert alert-success" role="alert">Course added.</div>';
+    echo '<div class="alert alert-success" role="alert">Violation added.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
     }
     break;
      case "Delete":
     if (deleteViolation($_POST['cid'])) {
-    echo '<div class="alert alert-success" role="alert">Course deleted.</div>';
+    echo '<div class="alert alert-success" role="alert">Violation deleted.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
     }
     break;
      case "Edit":
     if (updateViolation($_POST['vNumber'], $_POST['vReason'], $_POST['cid'])) {
-    echo '<div class="alert alert-success" role="alert">Course edited.</div>';
+    echo '<div class="alert alert-success" role="alert">Violation edited.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
     }
