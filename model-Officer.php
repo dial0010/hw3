@@ -2,7 +2,7 @@
 function selectOfficer() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Officer_id, Officer_name, Officer_rank FROM `Officer`");
+        $stmt = $conn->prepare("SELECT Officer_id, Office_name, Officer_rank FROM `Officer`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
