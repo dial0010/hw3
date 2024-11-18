@@ -10,7 +10,7 @@
     </thead>
     <tbody>
 <?php
-while ($Officers = $Officers->fetch_assoc()) {
+while ($Officer = $Officers->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $Officer['Officer_id']; ?></td>
