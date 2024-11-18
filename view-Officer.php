@@ -10,11 +10,11 @@
     </thead>
     <tbody>
 <?php
-while ($Officers = $Drivers->fetch_assoc()) {
+while ($Officers = $Officer->fetch_assoc()) {
 ?>
 <tr>
   <td><?php echo $Officer['Officer_id']; ?></td>
-    <td><?php echo $Officer['Officer_name']; ?></td>
+    <td><?php echo $Officer['Office_name']; ?></td>
     <td><?php echo $Officer['Officer_rank']; ?></td>
 </tr>
       <?php
