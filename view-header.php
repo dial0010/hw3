@@ -25,6 +25,9 @@
         <li class="nav-item">
           <a class="nav-link" href="Violation.php">Violation</a>
         </li>  
+         <li class="nav-item">
+          <a class="nav-link" href="Officer.php">Officers</a>
+        </li>  
         <li class="nav-item">
           <a class="nav-link" href="Drivers-with-Violation.php">Drivers with Violation</a>
         </li>  
