@@ -22,7 +22,7 @@ if (isset($_POST['actionType'])) {
     }
     break;
      case "Edit":
-    if (updateDrivers($_POST['dName'], $_POST['dReason'], $_POST['cid'])) {
+    if (updateDrivers($_POST['dName'], $_POST['dBrand'], $_POST['cid'])) {
     echo '<div class="alert alert-success" role="alert">Driver edited.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
