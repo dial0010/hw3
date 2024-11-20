@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
     }
     break;
      case "Delete":
-    if (deleteDrivers($_POST['cid'])) {
+    if (deleteDrivers($_POST['did'])) {
     echo '<div class="alert alert-success" role="alert">Driver deleted.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
     }
     break;
      case "Edit":
-    if (updateDrivers($_POST['dName'], $_POST['dBrand'], $_POST['cid'])) {
+    if (updateDrivers($_POST['dName'], $_POST['dBrand'], $_POST['did'])) {
     echo '<div class="alert alert-success" role="alert">Driver edited.</div>';
     } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
