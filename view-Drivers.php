@@ -25,8 +25,8 @@
 while ($Driver = $Drivers->fetch_assoc()) {
 ?>
 <tr>
-    <td><?php echo $Driver['Driver_id']; ?></td>
-    <td><?php echo $Driver['Driver_name']; ?></td>
+    <td><?php echo $Driver['Drivers_id']; ?></td>
+    <td><?php echo $Driver['Drivers_name']; ?></td>
     <td><?php echo $Driver['Car_Brand']; ?></td>
   <td>
     <?php
