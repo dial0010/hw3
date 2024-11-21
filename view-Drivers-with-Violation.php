@@ -48,7 +48,6 @@ while ($Driver = $Drivers->fetch_assoc()) {
    <?php
   include "view-Drivers-editform.php";
   ?>
-  
   </td>
     <td>
        <form method="post" action="">
