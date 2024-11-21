@@ -69,7 +69,6 @@ while ($Driver = $Drivers->fetch_assoc()) {
   </td>
 </tr>
       <?php
-}
 ?>
     </tbody>
   </table>
