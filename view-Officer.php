@@ -46,12 +46,6 @@ while ($Officer = $Officers->fetch_assoc()) {
   </button>
 </form>
   </td>
-  <td>
-    <form method="post" action="City-by-Violation.php">
-  <input type="hidden" name="cid" value="<?php echo $Violation['Violation_id']; ?>">
-  <button type="submit" class="btn btn-primary">City</button>
-</form>
-  </td>
 </tr>
       <?php
 }
