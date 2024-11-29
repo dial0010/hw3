@@ -48,7 +48,7 @@ while ($Driver = $Drivers->fetch_assoc()) {
   </td>
   <td>
     <form method="post" action="City-by-Violation.php">
-  <input type="hidden" name="did" value="<?php echo $Driver['Drivers_id']; ?>">
+  <input type="hidden" name="did" value="<?php echo $Violations['Drivers_id']; ?>">
   <button type="submit" class="btn btn-primary">City</button>
 </form>
   </td>
