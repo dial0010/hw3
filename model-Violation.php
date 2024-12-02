@@ -25,7 +25,7 @@ function insertViolation($vNumber, $vReason) {
         throw $e;
     }
 }
-function updateViolation($vNumber, $vReason, $Vid) {
+function updateViolation($vNumber, $vReason, $cid) {
   try {
     $conn = get_db_connection();
   $stmt = $conn->prepare("update `Violation` set `Violation_number` = ?, `Violation_reason` = ? where Violation_id = ?");
