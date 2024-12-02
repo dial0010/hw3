@@ -21,8 +21,8 @@
     <input type="text" class="form-control" id="dName<?php echo $Driver['Drivers_name']; ?>" name="dName" value="<?php echo $Driver['Drivers_name']; ?>">
   </div>
           <div class="mb-3">
-    <label for="dBrand<?php echo $Driver['Car_Brand']; ?>" class="form-label">Car Brand</label>
-    <input type="text" class="form-control" id="dBrand<?php echo $Driver['Car_brand']; ?>" name="dBrand" value="<?php echo $Driver['Car_Brand']; ?>">
+    <label for="dBrand<?php echo $Driver['Car_brand']; ?>" class="form-label">Car Brand</label>
+    <input type="text" class="form-control" id="dBrand<?php echo $Driver['Car_brand']; ?>" name="dBrand" value="<?php echo $Driver['Car_brand']; ?>">
   </div>
         <input type="hidden" name="did" value="<?php echo $Driver['Drivers_id']; ?>">
         <input type="hidden" name="actionType" value="Edit">
