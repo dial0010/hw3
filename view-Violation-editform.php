@@ -17,12 +17,12 @@
       <div class="modal-body">
       <form method="post" action="">
   <div class="mb-3">
-    <label for="vNumber<?php echo $Violation['Violation_id']; ?>" class="form-label">Violation Number</label>
-    <input type="text" class="form-control" id="vNumber<?php echo $Violation['Violation_id']; ?>" name="vNumber" value="<?php echo $Violation['Violation_number']; ?>">
+    <label for="vNumber<?php echo $Violation['Violation_number']; ?>" class="form-label">Violation Number</label>
+    <input type="text" class="form-control" id="vNumber<?php echo $Violation['Violation_number']; ?>" name="vNumber" value="<?php echo $Violation['Violation_number']; ?>">
   </div>
           <div class="mb-3">
-    <label for="vReason<?php echo $Violation['Violation_id']; ?>" class="form-label">Violation Reason</label>
-    <input type="text" class="form-control" id="vReason<?php echo $Violation['Violation_id']; ?>" name="vReason" value="<?php echo $Violation['Violation_reason']; ?>">
+    <label for="vReason<?php echo $Violation['Violation_reason']; ?>" class="form-label">Violation Reason</label>
+    <input type="text" class="form-control" id="vReason<?php echo $Violation['Violation_reason']; ?>" name="vReason" value="<?php echo $Violation['Violation_reason']; ?>">
   </div>
         <input type="hidden" name="cid" value="<?php echo $Violation['Violation_id']; ?>">
         <input type="hidden" name="actionType" value="Edit">
