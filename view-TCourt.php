@@ -17,6 +17,9 @@
         <th>City</th>
         <th>County</th>
         <th>State</th> 
+          <th></th>
+        <th></th> 
+        <th></th>
       </tr>
     </thead>
     <tbody>
