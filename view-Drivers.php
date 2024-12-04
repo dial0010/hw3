@@ -8,7 +8,6 @@
             <button class="btn btn-primary" type="submit">Search</button>
         </div>
     </form>
-
     <!-- Add Driver Form -->
     <form method="post" action="Drivers.php">
         <div class="mb-3">
