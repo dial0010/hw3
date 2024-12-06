@@ -30,7 +30,7 @@ while ($TCourt = $TCourts->fetch_assoc()) {
     <td><?php echo $TCourt['Tcourt_id']; ?></td>
     <td><?php echo $TCourt['Tcourt_name']; ?></td>
     <td><?php echo $TCourt['Tcourt_city']; ?></td>
-   <td><?php echo $TCourt['Tcourt_county']; ?></td>
+   <td><?php echo $TCourt['Tcourt_country']; ?></td>
     <td><?php echo $TCourt['Tcourt_state']; ?></td>
   <td>
     <?php
