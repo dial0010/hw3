@@ -21,16 +21,16 @@
           <input type="text" class="form-control" id="tName<?php echo $TCourt['Tcourt_name']; ?>" name="tName" value="<?php echo $TCourt['Tcourt_name']; ?>">
         </div>
         <div class="mb-3">
-          <label for="tCity<?php echo $TCourt['TCourt_city']; ?>" class="form-label">TCourt City</label>
+          <label for="tCity<?php echo $TCourt['Tcourt_city']; ?>" class="form-label">TCourt City</label>
           <input type="text" class="form-control" id="tCity<?php echo $TCourt['Tcourt_city']; ?>" name="tCity" value="<?php echo $TCourt['Tcourt_city']; ?>">
         </div>
         <div class="mb-3">
-          <label for="TCounty<?php echo $TCourt['Tcourt_county']; ?>" class="form-label">TCourt County</label>
-          <input type="text" class="form-control" id="tCounty<?php echo $TCourt['Tcourt_county']; ?>" name="tCounty" value="<?php echo $TCourt['Tcourt_county']; ?>">
+          <label for="TCounty<?php echo $TCourt['tcourt_county']; ?>" class="form-label">TCourt County</label>
+          <input type="text" class="form-control" id="tCounty<?php echo $TCourt['tcourt_county']; ?>" name="tCounty" value="<?php echo $TCourt['tcourt_county']; ?>">
         </div>
         <div class="mb-3">
-          <label for="oState<?php echo $TCourt['Tcourt_state']; ?>" class="form-label">TCourt State</label>
-          <input type="text" class="form-control" id="tState<?php echo $TCourt['Tcourt_state']; ?>" name="tState" value="<?php echo $TCourt['Tcourt_state']; ?>">
+          <label for="oState<?php echo $TCourt['tcourt_state']; ?>" class="form-label">TCourt State</label>
+          <input type="text" class="form-control" id="tState<?php echo $TCourt['tcourt_state']; ?>" name="tState" value="<?php echo $TCourt['tcourt_state']; ?>">
         </div>
         <input type="hidden" name="tid" value="<?php echo $TCourt['Tcourt_id']; ?>">
         <input type="hidden" name="actionType" value="Edit">
