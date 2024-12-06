@@ -27,9 +27,9 @@
 while ($TCourt = $TCourts->fetch_assoc()) {
 ?>
 <tr>
-    <td><?php echo $TCourt['tcourt_id']; ?></td>
-    <td><?php echo $TCourt['tcourt_name']; ?></td>
-    <td><?php echo $TCourt['tcourt_city']; ?></td>
+    <td><?php echo $TCourt['Tcourt_id']; ?></td>
+    <td><?php echo $TCourt['Tcourt_name']; ?></td>
+    <td><?php echo $TCourt['Tcourt_city']; ?></td>
    <td><?php echo $TCourt['tcourt_county']; ?></td>
     <td><?php echo $TCourt['tcourt_state']; ?></td>
   <td>
