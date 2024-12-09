@@ -14,8 +14,8 @@
             <select class="form-select" id="dName" name="dName">
               <?php
               // Fetch all drivers for the dropdown
-              $drivers = selectDrivers();
-              while ($driver = $drivers->fetch_assoc()) {
+              $Drivers = selectDrivers();
+              while ($Driver = $Drivers->fetch_assoc()) {
               ?>
                 <option value="<?php echo $driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $driver['Drivers_id']) ? 'selected' : ''; ?>>
                   <?php echo $driver['Drivers_name']; ?>
