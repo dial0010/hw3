@@ -17,8 +17,8 @@
               $Drivers = selectDrivers();
               while ($Driver = $Drivers->fetch_assoc()) {
               ?>
-                <option value="<?php echo $driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $driver['Drivers_id']) ? 'selected' : ''; ?>>
-                  <?php echo $driver['Drivers_name']; ?>
+                <option value="<?php echo $Driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $driver['Drivers_id']) ? 'selected' : ''; ?>>
+                  <?php echo $Driver['Drivers_name']; ?>
                 </option>
               <?php } ?>
             </select>
