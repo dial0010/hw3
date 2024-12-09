@@ -1,33 +1,51 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editDriversModal<?php echo $Driver['Drivers_id']; ?>">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-</svg>
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="editDriversModal<?php echo $Driver['Drivers_id']; ?>" tabindex="-1" aria-labelledby="editDriversModalLabel<?php echo $Driver['Drivers_id']; ?>" aria-hidden="true">
+<!-- Modal for editing Driver Violation -->
+<div class="modal fade" id="editDriverViolationModal<?php echo $Driver['Drivers_id']; ?>" tabindex="-1" aria-labelledby="editDriverViolationModalLabel<?php echo $Driver['Drivers_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editDriversModalLabel<?php echo $Driver['Drivers_id']; ?>">Edit Drivers</h1>
+        <h1 class="modal-title fs-5" id="editDriverViolationModalLabel<?php echo $Driver['Drivers_id']; ?>">Edit Driver Violation</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form method="post" action="">
-  <div class="mb-3">
-    <label for="dName<?php echo $Driver['Drivers_id']; ?>" class="form-label">Driver Name</label>
-    <input type="text" class="form-control" id="dName<?php echo $Driver['Drivers_name']; ?>" name="dName" value="<?php echo $Driver['Drivers_name']; ?>">
-  </div>
+        <form method="post" action="">
+          <!-- Dropdown for Driver Name -->
           <div class="mb-3">
-    <label for="dBrand<?php echo $Driver['Car_Brand']; ?>" class="form-label">Car Brand</label>
-    <input type="text" class="form-control" id="dBrand<?php echo $Driver['Car_brand']; ?>" name="dBrand" value="<?php echo $Driver['Car_Brand']; ?>">
-  </div>
-        <input type="hidden" name="did" value="<?php echo $Driver['Drivers_id']; ?>">
-        <input type="hidden" name="actionType" value="Edit">
-  <button type="submit" class="btn btn-primary">Save</button>
-</form>
+            <label for="dName" class="form-label">Driver Name</label>
+            <select class="form-select" id="dName" name="dName">
+              <?php
+              // Fetch all drivers for the dropdown
+              $drivers = selectDrivers();
+              while ($driver = $drivers->fetch_assoc()) {
+              ?>
+                <option value="<?php echo $driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $driver['Drivers_id']) ? 'selected' : ''; ?>>
+                  <?php echo $driver['Drivers_name']; ?>
+                </option>
+              <?php } ?>
+            </select>
+          </div>
+
+          <!-- Car Brand -->
+          <div class="mb-3">
+            <label for="dBrand" class="form-label">Car Brand</label>
+            <input type="text" class="form-control" id="dBrand" name="dBrand" value="<?php echo $Driver['Car_brand']; ?>">
+          </div>
+
+          <!-- Violation Number -->
+          <div class="mb-3">
+            <label for="vNumber" class="form-label">Violation Number</label>
+            <input type="text" class="form-control" id="vNumber" name="vNumber" value="<?php echo $Violation['Violation_number']; ?>">
+          </div>
+
+          <!-- Violation Reason -->
+          <div class="mb-3">
+            <label for="vReason" class="form-label">Violation Reason</label>
+            <input type="text" class="form-control" id="vReason" name="vReason" value="<?php echo $Violation['Violation_reason']; ?>">
+          </div>
+
+          <input type="hidden" name="actionType" value="Edit">
+          <input type="hidden" name="did" value="<?php echo $Driver['Drivers_id']; ?>">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
       </div>
     </div>
   </div>
