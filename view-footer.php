@@ -37,13 +37,13 @@ function initCharts() {
         tooltip: {},
         xAxis: {
             type: 'category',
-            data: ['Toyota', 'Honda', 'BMW', 'Ford', 'Chevrolet']
+            data: ['2015 Nissan Sentra SV', '2025 Range Rover Sport', '2020 Honda Accord', 'Ford Fiesta', 'Porsche Cayenne', 'Lambo', 'Hyundai Kona']
         },
         yAxis: {
             type: 'value'
         },
         series: [{
-            data: [10, 15, 5, 20, 8],
+            data: [10, 15, 8, 12, 5, 4, 7],  // Example counts for each brand
             type: 'bar'
         }]
     };
@@ -66,11 +66,9 @@ function initCharts() {
             type: 'pie',
             radius: '50%',
             data: [
-                { value: 40, name: 'Speeding' },
-                { value: 25, name: 'Parking' },
-                { value: 15, name: 'Signal Violation' },
-                { value: 10, name: 'Drunk Driving' },
-                { value: 10, name: 'Other' }
+                { value: 40, name: 'Parked without paying fee' },
+                { value: 30, name: 'Parked on handicap spot' },
+                { value: 30, name: 'Parked over line' }
             ]
         }]
     };
