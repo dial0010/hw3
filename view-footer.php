@@ -1,83 +1,59 @@
 </div>
 
-<script>
-// Initialize Notyf.js for Toast Notifications
-const notyf = new Notyf({
-    duration: 3000,
-    position: { x: 'right', y: 'top' }
-});
+<!-- Initialize JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-// Example toast notification
+<!-- AOS Scroll Animations -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- SweetAlert2 for Alerts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.10/dist/sweetalert2.min.js"></script>
+
+<!-- Flatpickr Date Picker -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
+
+<!-- Animate.css for Animations -->
+<script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.js"></script>
+
+<!-- ECharts for Chart Visualization -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+
+<script>
+// Initialize AOS (Animate On Scroll)
+AOS.init();
+
+// Example SweetAlert2 Toast Notifications
 setTimeout(function() {
-    notyf.success('Welcome to Parking HW3!');
+    Swal.fire({
+        title: 'Welcome!',
+        text: 'Thanks for visiting the Parking HW3 website.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
 }, 2000);
 
-// Initialize Parsley.js for form validation
-$(document).ready(function() {
-    // Example: Validate a form with Parsley
-    $('form').parsley();
+// Example Flatpickr Date Picker Initialization
+flatpickr("#date-picker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
 });
 
-// jQuery code for Dynamic Active Navbar Link Highlighting
-$('#navbarNav .nav-link').on('click', function() {
-    $('#navbarNav .nav-link').removeClass('active');
-    $(this).addClass('active');
+// Chart.js (Alternative to ECharts)
+var ctx = document.getElementById('carBrandChart').getContext('2d');
+var carBrandChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['2015 Nissan Sentra SV', '2025 Range Rover Sport', '2020 Honda Accord', 'Ford Fiesta', 'Porsche Cayenne', 'Lambo', 'Hyundai Kona'],
+        datasets: [{
+            label: 'Car Brands',
+            data: [10, 15, 8, 12, 5, 4, 7],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    }
 });
-
-// ECharts Chart Initialization (Car Brand and Violation Type)
-function initCharts() {
-    var carBrandChart = echarts.init(document.getElementById('carBrandChart'));
-    var violationChart = echarts.init(document.getElementById('violationChart'));
-
-    // Bar chart for Car Brands
-    var carBrandOption = {
-        title: {
-            text: 'Car Brands Used by Drivers'
-        },
-        tooltip: {},
-        xAxis: {
-            type: 'category',
-            data: ['2015 Nissan Sentra SV', '2025 Range Rover Sport', '2020 Honda Accord', 'Ford Fiesta', 'Porsche Cayenne', 'Lambo', 'Hyundai Kona']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: [{
-            data: [10, 15, 8, 12, 5, 4, 7],  // Example counts for each brand
-            type: 'bar'
-        }]
-    };
-
-    carBrandChart.setOption(carBrandOption);
-
-    // Pie chart for Violation Types
-    var violationOption = {
-        title: {
-            text: 'Violation Types',
-            subtext: 'Types of Violations',
-            left: 'center'
-        },
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c} ({d}%)'
-        },
-        series: [{
-            name: 'Violation Type',
-            type: 'pie',
-            radius: '50%',
-            data: [
-                { value: 40, name: 'Parked without paying fee' },
-                { value: 30, name: 'Parked on handicap spot' },
-                { value: 30, name: 'Parked over line' }
-            ]
-        }]
-    };
-
-    violationChart.setOption(violationOption);
-}
-
-// Initialize charts on page load
-window.onload = initCharts;
 </script>
+
 </body>
 </html>
