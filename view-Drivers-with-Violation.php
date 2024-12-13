@@ -28,8 +28,8 @@
       ?>
         <tr>
           <td><?php echo $Driver['Drivers_id']; ?></td>
-          <td><?php echo $Driver['Drivers_name']; ?></td>
-          <td><?php echo $Driver['Car_brand']; ?></td>
+          <td><img src="https://via.placeholder.com/20" alt="Driver Icon" class="me-2"><?php echo $Driver['Drivers_name']; ?></td>
+          <td><img src="https://via.placeholder.com/20" alt="Car Icon" class="me-2"><?php echo $Driver['Car_brand']; ?></td>
           <td>
             <!-- List violations for this driver -->
             <?php
