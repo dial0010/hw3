@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="post" action="">
+        <form method="post" action="update-driver-violation.php">
           <!-- Dropdown for Driver Name -->
           <div class="mb-3">
             <label for="dName" class="form-label">Driver Name</label>
@@ -17,7 +17,7 @@
               $Drivers = selectDrivers();
               while ($Driver = $Drivers->fetch_assoc()) {
               ?>
-                <option value="<?php echo $Driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $driver['Drivers_id']) ? 'selected' : ''; ?>>
+                <option value="<?php echo $Driver['Drivers_id']; ?>" <?php echo ($Driver['Drivers_id'] == $Driver['Drivers_id']) ? 'selected' : ''; ?>>
                   <?php echo $Driver['Drivers_name']; ?>
                 </option>
               <?php } ?>
@@ -27,24 +27,25 @@
           <!-- Car Brand -->
           <div class="mb-3">
             <label for="dBrand" class="form-label">Car Brand</label>
-            <input type="text" class="form-control" id="dBrand" name="dBrand" value="<?php echo $Driver['Car_brand']; ?>">
+            <input type="text" class="form-control" id="dBrand" name="dBrand" value="<?php echo $Driver['Car_brand']; ?>" required>
           </div>
 
           <!-- Violation Number -->
           <div class="mb-3">
             <label for="vNumber" class="form-label">Violation Number</label>
-            <input type="text" class="form-control" id="vNumber" name="vNumber" value="<?php echo $Violation['Violation_number']; ?>">
+            <input type="text" class="form-control" id="vNumber" name="vNumber" value="<?php echo $Violation['Violation_number']; ?>" required>
           </div>
 
           <!-- Violation Reason -->
           <div class="mb-3">
             <label for="vReason" class="form-label">Violation Reason</label>
-            <input type="text" class="form-control" id="vReason" name="vReason" value="<?php echo $Violation['Violation_reason']; ?>">
+            <input type="text" class="form-control" id="vReason" name="vReason" value="<?php echo $Violation['Violation_reason']; ?>" required>
           </div>
 
-          <input type="hidden" name="actionType" value="Edit">
-          <input type="hidden" name="did" value="<?php echo $Driver['Drivers_id']; ?>">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <input type="hidden" name="Drivers_id" value="<?php echo $Driver['Drivers_id']; ?>">
+          <input type="hidden" name="Violation_id" value="<?php echo $Violation['Violation_id']; ?>">
+
+          <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
       </div>
     </div>
