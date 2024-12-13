@@ -14,21 +14,21 @@ include "view-header.php";
   <div class="row text-center">
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="images/spot1.jpg" alt="Spot 1" class="img-fluid">
+        <img src="https://via.placeholder.com/400x300?text=Spot+1" alt="Spot 1" class="img-fluid">
         <h3>Spot 1</h3>
         <p>Location: Downtown Area</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="images/spot2.jpg" alt="Spot 2" class="img-fluid">
+        <img src="https://via.placeholder.com/400x300?text=Spot+2" alt="Spot 2" class="img-fluid">
         <h3>Spot 2</h3>
         <p>Location: Near City Hall</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="images/spot3.jpg" alt="Spot 3" class="img-fluid">
+        <img src="https://via.placeholder.com/400x300?text=Spot+3" alt="Spot 3" class="img-fluid">
         <h3>Spot 3</h3>
         <p>Location: Close to University</p>
       </div>
