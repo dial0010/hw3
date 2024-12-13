@@ -14,21 +14,21 @@ include "view-header.php";
   <div class="row text-center">
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="https://via.placeholder.com/400x300?text=Spot+1" alt="Spot 1" class="img-fluid">
+        <img src="https://jmthompson.com/wp-content/uploads/2018/10/parkingdeck_conrad-104-scaled.jpg" alt="Spot 1" class="img-fluid">
         <h3>Spot 1</h3>
         <p>Location: Downtown Area</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="https://via.placeholder.com/400x300?text=Spot+2" alt="Spot 2" class="img-fluid">
+        <img src="https://www.embarkok.com/assets/images/Parking/Sheridan_Walker.jpg" alt="Spot 2" class="img-fluid">
         <h3>Spot 2</h3>
         <p>Location: Near City Hall</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="parking-spot">
-        <img src="https://via.placeholder.com/400x300?text=Spot+3" alt="Spot 3" class="img-fluid">
+        <img src="https://bloximages.newyork1.vip.townnews.com/oudaily.com/content/tncms/assets/v3/editorial/f/0a/f0a2778e-99f5-11e4-893e-d7abb268b478/54b31cd1ee9ad.image.jpg" alt="Spot 3" class="img-fluid">
         <h3>Spot 3</h3>
         <p>Location: Close to University</p>
       </div>
